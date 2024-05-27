@@ -1,0 +1,375 @@
+<?xml version="1.0" ?>
+<robot name="museum_robo_imp" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find museum_robo_imp_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find museum_robo_imp_description)/urdf/museum_robo_imp.trans" />
+<xacro:include filename="$(find museum_robo_imp_description)/urdf/museum_robo_imp.gazebo" />
+
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.005503729856500313 -0.075575043772275 0.19926518483204297" rpy="0 0 0"/>
+    <mass value="4.035587576084494"/>
+    <inertia ixx="0.045115" iyy="0.116457" izz="0.156496" ixy="0.003471" iyz="-0.000109" ixz="0.000397"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+<link name ="camera_link">
+</link>
+<link name ="imu_link">
+</link>
+<link name="battery_frame_1">
+  <inertial>
+    <origin xyz="-0.017395627823649742 -0.1620783129785187 0.22812361273034176" rpy="0 0 0"/>
+    <mass value="0.02192036028338395"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="3e-06" ixy="-1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.090281 -0.037716 0.002663" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/battery_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.090281 -0.037716 0.002663" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/battery_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="battery_frame_2">
+  <inertial>
+    <origin xyz="-0.01310591070838156 0.022945325448270156 0.2293312441237733" rpy="0 0 0"/>
+    <mass value="0.02192036028338395"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="3e-06" ixy="-1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.050219 0.049782 0.003089" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/battery_frame_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.050219 0.049782 0.003089" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/battery_frame_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="battery_1">
+  <inertial>
+    <origin xyz="-0.07120174112136368 0.0736142277531775 0.032965232718102866" rpy="0 0 0"/>
+    <mass value="3.1172686605849664"/>
+    <inertia ixx="0.003943" iyy="0.007812" izz="0.009049" ixy="0.00017" iyz="-4e-06" ixz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.076531 0.129153 -0.226981" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.076531 0.129153 -0.226981" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_1_1">
+  <inertial>
+    <origin xyz="-0.00924676413706671 -0.1266624216791446 0.22720455796956518" rpy="0 0 0"/>
+    <mass value="0.26962977599999993"/>
+    <inertia ixx="0.00206" iyy="3.8e-05" izz="0.002032" ixy="-9.9e-05" iyz="-4e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.237281 -0.040189 -0.002733" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.237281 -0.040189 -0.002733" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_2_1">
+  <inertial>
+    <origin xyz="-0.005714817125201055 -0.10494396785031085 0.22909110004657537" rpy="0 0 0"/>
+    <mass value="0.26962977599999993"/>
+    <inertia ixx="0.00206" iyy="3.8e-05" izz="0.002032" ixy="-9.9e-05" iyz="-4e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.212719 -0.040194 -0.002682" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.212719 -0.040194 -0.002682" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_4_1">
+  <inertial>
+    <origin xyz="-0.053066963350340376 -0.2688489011095625 0.23497879327221188" rpy="0 0 0"/>
+    <mass value="0.5099394409501705"/>
+    <inertia ixx="0.000707" iyy="0.008018" izz="0.008613" ixy="0.000357" iyz="-0.0" ixz="3.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.052282 -0.078209 0.000978" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.052282 -0.078209 0.000978" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_3_1">
+  <inertial>
+    <origin xyz="-0.04186743969423119 0.11718891377822814 0.2362249914683265" rpy="0 0 0"/>
+    <mass value="0.5099394409501705"/>
+    <inertia ixx="0.000707" iyy="0.008018" izz="0.008613" ixy="0.000357" iyz="-6e-06" ixz="3.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05228 0.077789 0.001708" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.05228 0.077789 0.001708" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/base_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_4_1">
+  <inertial>
+    <origin xyz="0.027826737738594592 -0.0013536106522436253 -0.0001146554693908508" rpy="0 0 0"/>
+    <mass value="5.180977168001354"/>
+    <inertia ixx="0.034525" iyy="0.01875" izz="0.018713" ixy="-0.000769" iyz="3e-06" ixz="-6.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.220779 0.199752 -0.171233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/wheel_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.220779 0.199752 -0.171233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/wheel_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_1">
+  <inertial>
+    <origin xyz="-0.0278259884915584 0.0013535410220804345 0.00011468832746730495" rpy="0 0 0"/>
+    <mass value="5.1809771680013545"/>
+    <inertia ixx="0.034525" iyy="0.01875" izz="0.018713" ixy="-0.000769" iyz="3e-06" ixz="-6.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.225689 0.178028 -0.173068" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.225689 0.178028 -0.173068" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_2_1">
+  <inertial>
+    <origin xyz="-0.027826535509372557 0.0013540838101739339 0.00011404734197495436" rpy="0 0 0"/>
+    <mass value="5.180977168001355"/>
+    <inertia ixx="0.034525" iyy="0.01875" izz="0.018713" ixy="-0.000769" iyz="3e-06" ixz="-6.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.214642 -0.048959 -0.173578" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.214642 -0.048959 -0.173578" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_3_1">
+  <inertial>
+    <origin xyz="0.027826190720778937 -0.0013540678641512788 -0.00011429645488297835" rpy="0 0 0"/>
+    <mass value="5.180977168001353"/>
+    <inertia ixx="0.034525" iyy="0.01875" izz="0.018713" ixy="-0.000769" iyz="3e-06" ixz="-6.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.231826 -0.027236 -0.171742" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/wheel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.231826 -0.027236 -0.171742" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/wheel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cam_1">
+  <inertial>
+    <origin xyz="0.18198608416002604 -0.09982910525723863 0.8011028298356982" rpy="0 0 0"/>
+    <mass value="7.291552618339808"/>
+    <inertia ixx="0.257905" iyy="0.320723" izz="0.072869" ixy="0.003853" iyz="0.015783" ixz="-0.004761"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.167719 -0.000219 0.002868" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/cam_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.167719 -0.000219 0.002868" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://museum_robo_imp_description/meshes/cam_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+
+<joint name="camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0 -0.15 0.5" rpy="0 0  -1.57"/>
+</joint>
+
+<joint name="imu_link_1" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0.173068" rpy="0 0  0"/>
+</joint>
+
+<joint name="rigid_14" type="fixed">
+  <origin xyz="0.090281 0.037716 -0.002663" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="battery_frame_1"/>
+</joint>
+
+<joint name="rigid_15" type="fixed">
+  <origin xyz="-0.050219 -0.049782 -0.003089" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="battery_frame_2"/>
+</joint>
+
+<joint name="rigid_16" type="fixed">
+  <origin xyz="-0.01375 -0.166869 0.229644" rpy="0 0 0"/>
+  <parent link="battery_frame_1"/>
+  <child link="battery_1"/>
+</joint>
+
+<joint name="Rigid 55" type="fixed">
+  <origin xyz="0.237281 0.040189 0.002733" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="base_1_1"/>
+</joint>
+
+<joint name="Rigid 56" type="fixed">
+  <origin xyz="-0.212719 0.040194 0.002682" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="base_2_1"/>
+</joint>
+
+<joint name="Rigid 57" type="fixed">
+  <origin xyz="0.052282 0.078209 -0.000978" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="base_4_1"/>
+</joint>
+
+<joint name="Rigid 59" type="fixed">
+  <origin xyz="0.05228 -0.077789 -0.001708" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="base_3_1"/>
+</joint>
+
+<joint name="fr" type="continuous">
+  <origin xyz="0.220779 -0.199752 0.171233" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_4_1"/>
+  <axis xyz="0.99881 -0.048598 -0.004106"/>
+</joint>
+
+<joint name="fl" type="continuous">
+  <origin xyz="-0.225689 -0.178028 0.173068" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_1"/>
+  <axis xyz="0.99881 -0.048598 -0.004106"/>
+</joint>
+
+<joint name="rl" type="continuous">
+  <origin xyz="-0.214642 0.048959 0.173578" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_2_1"/>
+  <axis xyz="0.99881 -0.048598 -0.004106"/>
+</joint>
+
+<joint name="rr" type="continuous">
+  <origin xyz="0.231826 0.027236 0.171742" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_3_1"/>
+  <axis xyz="0.99881 -0.048598 -0.004106"/>
+</joint>
+
+<joint name="Rigid 81" type="fixed">
+  <origin xyz="-0.167719 0.000219 -0.002868" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cam_1"/>
+</joint>
+
+</robot>

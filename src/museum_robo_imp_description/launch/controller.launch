@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find museum_robo_imp_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="museum_robo_imp" args="fr_position_controller fl_position_controller rl_position_controller rr_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/museum_robo_imp/joint_states"/>
+</node>
+
+</launch>

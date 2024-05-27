@@ -1,0 +1,6 @@
+<launch> 
+ <include file="$(find museum_robo_imp_description)/launch/display.launch"/>
+ <include file="$(find point_laser)/launch/s.launch"/>
+ <include file="$(find museum_robo_imp_description)/map/slam_gmapping-melodic-devel/gmapping/launch/slam_gmapping_pr2.launch"/>    
+ <include file="$(find k_f)/launch/K_F.launch"/>    
+</launch>
